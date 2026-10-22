@@ -11,18 +11,27 @@ fun main() {
        Book("Стив Джобс", "Айзексон", 2011, Genre.BIOGRAPHY, BookStatus.ARCHIVED),
        Book("Марсианин", "Вейер", 2011, Genre.SCIENTIFIC, BookStatus.AVAILABLE)
    )
-    printCat(catalog)
-    stat(catalog)
-    allAvailable(catalog)
-    inGenres(catalog, "fantasy")
-    inYear(catalog, 1977)
-    borrowBook(catalog, 1)
-    borrowBook(catalog, 8)
-    backBook(catalog, 2)
-    backBook(catalog, 5)
-    lostBook(catalog, 6)
-    resBook(catalog, 7)
+//    printCat(catalog)
+//    stat(catalog)
+//    allAvailable(catalog)
+//    inGenres(catalog, "fantasy")
+//    inYear(catalog, 1977)
+//    borrowBook(catalog, 1)
+//    borrowBook(catalog, 8)
+//    backBook(catalog, 2)
+//    backBook(catalog, 5)
+//    lostBook(catalog, 6)
+//    resBook(catalog, 7)
+
+    finalStat(catalog)
 }
+
+fun finalStat(catalog: List<Book>) {
+    println("---  Отчет по каталогу  ---")
+    println("Всего книг: ${catalog.size}")
+    stat(catalog)
+}
+
 fun printCat(catalog: List<Book>) {
     println("№ | Название | Автор | Год | Жанр | Статус")
     println("-".repeat(80))
